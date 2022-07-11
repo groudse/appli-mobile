@@ -1,11 +1,12 @@
 public class StringLength {
     public static int getStringLength(String s) {
-        if(s != " "){
-        return s.length();
-        }else if(s == " "){
-            return s.length();
-        }else{
+        if(s == null){
             return 0;
+        
+         
+        }else{
+            return s.length();
         }
+        
     }
 }
