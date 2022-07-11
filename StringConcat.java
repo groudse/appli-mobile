@@ -3,7 +3,7 @@ public class StringConcat {
         if(s1!=null && s2!=null){
         return s1.concat(s2);
         }else{
-            return 0;
+            return " ";
         }
 }
 }
