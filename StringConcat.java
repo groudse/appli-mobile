@@ -6,3 +6,4 @@ public class StringConcat {
             return 0;
         }
 }
+}
