@@ -1,10 +1,7 @@
 public class ComputeArray {
     public static int[] computeArray(int[] array) {
         int stock;
-        if(array == null){
-            return null;
-        }
-
+        
       for(int i = 0;i<array.length;i++){
         
         if(array[i]%3==0){
