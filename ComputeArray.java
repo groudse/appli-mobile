@@ -5,7 +5,9 @@ public class ComputeArray {
         return null;
         }
       for(int i = 0;i<array.length;i++){
-        
+         if(array[i] == null){
+        return null;
+        }
         
         if(array[i]%3==0){
             array[i] = array[i]*5;
