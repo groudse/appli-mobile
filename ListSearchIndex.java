@@ -34,7 +34,7 @@ public class ListSearchIndex {
        }else{
         return null;
        }}else{
-        System.out.println("Empty");
+        return list.emptyList();
        }
     }
     
