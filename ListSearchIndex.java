@@ -27,7 +27,7 @@ public class ListSearchIndex {
 
         List<Integer> myList = new ArrayList<>();
        if(list == null){
-            return null;
+            return myList;
        }else if(list.isEmpty() == true){
     
             return myList;
