@@ -5,8 +5,9 @@ public class ListEqual {
        
        if(list1 == null || list2 == null){
         return false;
-       }else{
-        if(list1.equals(list2)){
+       }else if(list1 == null && list2 == null){
+        return true;
+        }else if(list1.equals(list2)){
         return true;
 
         }else{
@@ -15,4 +16,3 @@ public class ListEqual {
        }
 
     }
-}
