@@ -40,7 +40,7 @@ public class ListSearchIndex {
             
         }
         if(myList.isEmpty() == true){
-            return null;
+            return myList;
         }
        }
         return myList;
