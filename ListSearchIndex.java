@@ -19,7 +19,7 @@ public class ListSearchIndex {
        }
     }
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
-      
+       
         if(list.contains(value)){
        
         List myList = new ArrayList();
@@ -34,6 +34,7 @@ public class ListSearchIndex {
        }else{
         return null;
        }
+    }
     
     
 }
