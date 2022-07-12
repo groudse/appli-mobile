@@ -31,11 +31,11 @@ public class ListSearchIndex {
        }else if(list.isEmpty() == true){
     
             return myList;
-       }else if(list.contains(value)){
+       }else if(list.contains(value) == true){
            
        
        
-        System.out.print(value+"\n");
+       
        for(int i=0;i<list.size();i++){
         
       
