@@ -35,6 +35,7 @@ public class ListSearchIndex {
         return null;
        }}else{
         //return list.of();
+        return true;
        }
     }
     
