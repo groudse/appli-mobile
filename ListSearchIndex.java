@@ -26,28 +26,24 @@ public class ListSearchIndex {
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
 
         List<Integer> myList = new ArrayList<>();
+        //System.out.print(list.contains(value));
        if(list == null){
-            return myList;
+            return null;
        }else if(list.isEmpty() == true){
     
             return myList;
-       }else if(list.contains(value) == true){
-           
-       
-       
+       }else{
        
        for(int i=0;i<list.size();i++){
-        
-      
-       
             if(list.get(i) == value){
             myList.add(i);
             
         }
+        if(myList.isEmpty() == true){
+            return null;
+        }
        }
         return myList;
-       }else{
-        return null;
        }
     }
     
