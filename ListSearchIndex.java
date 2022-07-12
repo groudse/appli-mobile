@@ -3,7 +3,7 @@ import java.util.*;
 public class ListSearchIndex {
     public static Integer findLastIndex(List<Integer> list, Integer value) {
       
-       if(list.contains(value) && !(list == null)){
+       if((list.contains(value)) && (!(list == null))){
        return list.lastIndexOf(value);
        
        }else{
@@ -13,7 +13,7 @@ public class ListSearchIndex {
     }
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
         
-        if(list.contains(value) && !(list == null)){
+        if((list.contains(value)) && (!(list == null))){
        return list.indexOf(value);
        }else{
         return null;
