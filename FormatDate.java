@@ -30,11 +30,12 @@ public class FormatDate {
     }
 
     public static String formatSimple(LocalDate date) {
-        // your code here
+        return time;
+        
     }
 
     public static String formatIso(LocalTime time) {
-        // your code here
+        return time;
     }
 
 }
