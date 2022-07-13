@@ -19,8 +19,14 @@ public class FormatDate {
     public static String formatToFullText(LocalDateTime dateTime) {
        
        
+       
+     
     
        if(dateTime != null){
+        String test = dateTime.toString();
+       int pp = test.length();
+        String gg = "" + pp;
+        if(gg==19){
        String dateString = dateTime.toString();
        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("'Le' dd MMMM 'de l''an' yyyy 'à' HH'h'mm'm et' ss's'");
@@ -28,8 +34,15 @@ public class FormatDate {
        String sortie = formatter2.format(dateT);
        return sortie;
         }else{
-            return null;
-        }
+            String dateString = dateTime.toString();
+       DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SS");
+       DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("'Le' dd MMMM 'de l''an' yyyy 'à' HH'h'mm'm et' ss's'");
+       LocalDateTime dateT = LocalDateTime.parse(dateString, formatter1);
+       String sortie = formatter2.format(dateT);
+       return sortie;
+            
+        }}else{return null;
+        }*/
     }
 
     public static String formatSimple(LocalDate date) {
