@@ -9,7 +9,7 @@ import java.util.Locale;
 public class ParseDate {
 
     public static LocalDateTime parseIsoFormat(String stringDate) {
-        if(!stringDate == null){
+        if(stringDate != null){
         LocalDateTime parseIt = LocalDateTime.parse(stringDate);
         return parseIt;
     }else{
@@ -18,7 +18,7 @@ public class ParseDate {
     }
 
   public static LocalDate parseFullTextFormat(String stringDate) {
-    if(!stringDate == null){
+    if(stringDate != null){
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy", Locale.FRANCE);
     LocalDate dt = LocalDate.from(formatter.parse(stringDate));
     return dt;
@@ -33,7 +33,7 @@ public class ParseDate {
         
         
     
-    if(!stringDate == null){
+    if(stringDate != null){
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh 'heures' B, mm 'minutes et' ss 'secondes'", Locale.FRANCE);
     LocalTime dt = LocalTime.from(formatter.parse(stringDate));
     return dt;
