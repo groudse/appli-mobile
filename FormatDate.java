@@ -29,13 +29,13 @@ public class FormatDate {
         }
     }
 
-    /*public static String formatSimple(LocalDate date) {
+    public static String formatSimple(LocalDate date) {
         // your code here
     }
 
     public static String formatIso(LocalTime time) {
         // your code here
-    }*/
+    }
 
 }
 
