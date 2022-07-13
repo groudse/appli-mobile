@@ -30,7 +30,7 @@ public class FormatDate {
     }
 
     public static String formatSimple(LocalDate date) {
-        return time;
+        return date;
         
     }
 
