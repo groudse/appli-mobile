@@ -42,7 +42,7 @@ public class FormatDate {
        return sortie;
             
         }}else{return null;
-        }*/
+        }
     }
 
     public static String formatSimple(LocalDate date) {
