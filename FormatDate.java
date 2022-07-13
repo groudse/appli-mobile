@@ -25,8 +25,8 @@ public class FormatDate {
        if(dateTime != null){
         String test = dateTime.toString();
        int pp = test.length();
-        String gg = "" + pp;
-        if(gg==19){
+        
+        if(pp==19){
        String dateString = dateTime.toString();
        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("'Le' dd MMMM 'de l''an' yyyy 'à' HH'h'mm'm et' ss's'");
