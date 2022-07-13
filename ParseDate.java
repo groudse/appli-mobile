@@ -15,6 +15,7 @@ public class ParseDate {
     }else{
         return null;
     }
+    }
 
   public static LocalDate parseFullTextFormat(String stringDate) {
     if(!stringDate == null){
