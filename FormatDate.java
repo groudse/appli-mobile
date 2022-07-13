@@ -31,7 +31,7 @@ public class FormatDate {
 
     public static String formatSimple(LocalDate date) {
         
-        if(dateTime != null){
+        if(date != null){
         return date.toString();
         }else{
             return null;
@@ -39,7 +39,7 @@ public class FormatDate {
     }
 
     public static String formatIso(LocalTime time) {
-        if(dateTime != null){
+        if(time != null){
         return time.toString();
         }else{
             return null;
