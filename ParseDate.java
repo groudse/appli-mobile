@@ -25,6 +25,7 @@ public class ParseDate {
     }else{
         return null;
     }
+  }
 
  
     public static LocalTime parseTimeFormat(String stringDate) {
