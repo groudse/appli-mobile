@@ -10,7 +10,12 @@ public class DifferenceBetweenDate {
        
         if(localTime1 != null && localTime2 != null){
        Duration dd = Duration.between(localTime1,localTime2);
-       return dd;
+       if(dd.isNegative() == false){
+        return dd;
+       }else{
+       Duration dd2 = Duration.between(localTime2,localTime1);
+        return dd2;
+       }
     }else{
         return null;
     }
@@ -22,10 +27,13 @@ public class DifferenceBetweenDate {
 
         Period difference = Period.between(date1, date2);
        
-       
+       if(difference.isNegative() == false){
         return difference;
 
-         } else{
+         }else{
+            Period difference2 = Period.between(date2, date1);
+            return difference2;
+         }} else{
             return null;
         }
     }
