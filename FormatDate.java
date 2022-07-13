@@ -36,7 +36,7 @@ public class FormatDate {
         }else{
             String dateString = dateTime.toString();
        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.nn");
-       DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("'Le' dd MMM'.' 'de l''an' yyyy 'à' HH'h'mm'm et' ss's'", Locale.FRANCE);
+       DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("'Le' dd MMM 'de l''an' yyyy 'à' HH'h'mm'm et' ss's'", Locale.FRANCE);
        LocalDateTime dateT = LocalDateTime.parse(dateString, formatter1);
        String sortie = formatter2.format(dateT);
        return sortie;
