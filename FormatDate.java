@@ -37,7 +37,7 @@ public class FormatDate {
         if(date != null){
         String dateString = date.toString();
        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-       DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("MMMM dd L", Locale.ITALIAN);
+       DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("MMMM dd yy", Locale.ITALIAN);
        LocalDate dateT = LocalDate.parse(dateString, formatter1);
        String sortie = formatter2.format(dateT);
        return sortie;
