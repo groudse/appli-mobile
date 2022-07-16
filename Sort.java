@@ -19,7 +19,7 @@ public class Sort {
     
         return list2;
     }else{
-        return list2;
+        return null;
     }
  
      
@@ -39,7 +39,7 @@ public class Sort {
     
         return list2;
     }else{
-        return list2;
+        return null;
     }
     }
 }
