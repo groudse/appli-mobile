@@ -27,7 +27,7 @@ public class CelestialObject {
     } 
 
     public void setY(double newY){
-        x = newY;
+        y = newY;
     }  
 
     public double getY(){
@@ -35,7 +35,7 @@ public class CelestialObject {
     } 
 
     public void setZ(double newZ){
-        x = newZ;
+        z = newZ;
     }  
 
     public double getZ(){
@@ -43,7 +43,7 @@ public class CelestialObject {
     } 
 
     public void setName(String newName){
-        x = newName;
+        name = newName;
     }  
 
     public String getName(){
