@@ -3,18 +3,21 @@ public class CelestialObject {
     public double y;
     public double z;
     public String name;
-    // public  double x(double sortie){
-    //     return sortie;
-    // }
-
     
-    // public static double y(double sortie){
-    //     return sortie;
-    // }
-    // public static double z(double sortie){
-    //     return sortie;
-    // }
-    // public static String name(String sortie){
-    //     return sortie;
-    // }
+    CelestialObject(){
+        x = 0.0;
+        y = 0.0;
+        z = 0.0;
+        name = "Soleil";
+    }
+
+    CelestialObject(String f,double v1,double v2,double v3){
+        x = v1;
+        y = v2;
+        z = v3;
+        name = f;
+    }
 }
+
+
+
