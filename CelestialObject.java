@@ -4,7 +4,7 @@ public class CelestialObject {
     public double y;
     public double z;
     public String name;
-    final static double KM_IN_ONE_AU = 150000000;
+    public final static double KM_IN_ONE_AU = 150000000;
 
 
 
@@ -70,6 +70,41 @@ public class CelestialObject {
         
         return distanceKm;
     }
+
+    public String toString(){
+        String fff = getName() +" is positioned at (" + getX() + "," + getY() + "," + getZ() +")";
+        return fff;
+    }
+
+    public boolean equals(CelestialObject obj1){
+
+        boolean test1 = getName().equals(obj1.getName());
+        boolean test2 = getX() == obj1.getX();
+        boolean test3 = getY() == obj1.getY();
+        boolean test4 = getZ() == obj1.getZ();
+
+
+        if((test1 && test2) && (test3 && test4) == true){
+           
+            hashCode();
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public int hashCode(){
+        
+        int aa = getClass().hashCode();
+
+        System.out.println(aa*2);
+
+        return  aa;
+        
+    }
+
+    
+
 }
 
 
