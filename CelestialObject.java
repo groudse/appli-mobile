@@ -17,6 +17,38 @@ public class CelestialObject {
         z = v3;
         name = f;
     }
+
+    public void setX(double newX){
+        x = newX;
+    }  
+
+    public double getX(){
+        return x;
+    } 
+
+    public void setY(double newY){
+        x = newY;
+    }  
+
+    public double getY(){
+        return y;
+    } 
+
+    public void setZ(double newZ){
+        x = newZ;
+    }  
+
+    public double getZ(){
+        return z;
+    } 
+
+    public void setName(double newName){
+        x = newName;
+    }  
+
+    public String getName(){
+        return name;
+    } 
 }
 
 
