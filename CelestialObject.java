@@ -42,7 +42,7 @@ public class CelestialObject {
         return z;
     } 
 
-    public void setName(double newName){
+    public void setName(String newName){
         x = newName;
     }  
 
