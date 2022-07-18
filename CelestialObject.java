@@ -51,7 +51,13 @@ public class CelestialObject {
     }  
 
     public String getName(){
+        if(name == null){
+
+        
         return name;
+        }else{
+            return null;
+        }
     } 
 
     public static double getDistanceBetween(CelestialObject obj1,CelestialObject obj2){
