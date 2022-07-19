@@ -52,10 +52,10 @@ public class CelestialObject {
 
     public String getName(){
         
-        return this.name;
+        return name;
         
     } 
-
+    
     public static double getDistanceBetween(CelestialObject obj1,CelestialObject obj2){
         double d = Math.pow((Math.pow(obj2.getX() - obj1.getX(), 2) +
                          Math.pow(obj2.getY() - obj1.getY() , 2) +
@@ -68,7 +68,7 @@ public class CelestialObject {
 
     public static double getDistanceBetweenInKm(CelestialObject obj1,CelestialObject obj2){
         
-        double distanceKm = CelestialObject.getDistanceBetween(obj1, obj2)* KM_IN_ONE_AU;
+        double distanceKm = getDistanceBetween(obj1, obj2)* KM_IN_ONE_AU;
         
         return distanceKm;
     }
@@ -83,10 +83,10 @@ public class CelestialObject {
 
     public boolean equals(CelestialObject obj1){
 
-        boolean test1 = getName().equals(obj1.getName());
-        boolean test2 = getX() == obj1.getX();
-        boolean test3 = getY() == obj1.getY();
-        boolean test4 = getZ() == obj1.getZ();
+        boolean test1 = this.getName().equals(obj1.getName());
+        boolean test2 = this.getX() == obj1.getX();
+        boolean test3 = this.getY() == obj1.getY();
+        boolean test4 = this.getZ() == obj1.getZ();
 
 
         if((test1 && test2) && (test3 && test4) == true){
