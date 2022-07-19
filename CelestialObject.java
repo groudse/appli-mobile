@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class CelestialObject {
    
     public double x;
@@ -75,11 +77,11 @@ public class CelestialObject {
 
     public String toString(){
         if(getName() != null){
-            double scale = Math.pow(10, 3);
+            DecimalFormat df = new DecimalFormat("###.###");
                 
-            double newX = getX();
-            double newY = getY(); 
-            double newZ = getZ() ; 
+            double newX = df.format(getX());
+            double newY = df.format(getY()); 
+            double newZ = df.format(getZ()) ; 
  
         String fff = this.getName() +" is positioned at (" +newX + "," +newY + "," + newZ +")";
         return fff;
