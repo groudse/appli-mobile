@@ -83,7 +83,7 @@ public class CelestialObject {
             double newY = df.format(getY()); 
             double newZ = df.format(getZ()) ; 
  
-        String fff = this.getName() +" is positioned at (" +newX + "," +newY + "," + newZ +")";
+        String fff = this.getName() +" is positioned at (" +df.format(getX()) + "," +df.format(getY()) + "," + newZ +")";
         return fff;
         }
         return "e";
