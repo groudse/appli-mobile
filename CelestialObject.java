@@ -104,7 +104,7 @@ public class CelestialObject {
             return false;
         }
     }else{
-        return null;
+        return false;
     }
     }
 
