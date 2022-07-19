@@ -110,7 +110,7 @@ public class CelestialObject {
 
     public int hashCode(){
         
-       return(this.hashCode());
+       return(getClass().hashCode());
         
     }
 
