@@ -9,17 +9,17 @@ public class CelestialObject {
 
 
     public CelestialObject(){
-        x = 0.0;
-        y = 0.0;
-        z = 0.0;
-        name = "Soleil";
+        this.x = 0.0;
+        this.y = 0.0;
+        this.z = 0.0;
+        this.name = "Soleil";
     }
 
     public CelestialObject(String f,double v1,double v2,double v3){
-        x = v1;
-        y = v2;
-        z = v3;
-        name = f;
+        this.x = v1;
+        this.y = v2;
+        this.z = v3;
+        this.name = f;
     }
 
     public void setX(double newX){
@@ -75,7 +75,9 @@ public class CelestialObject {
 
     public String toString(){
         if(getName() != null){
-        String fff = getName() +" is positioned at (" + getX() + "," + getY() + "," + getZ() +")";
+        DecimalFormat df = new DecimalFormat("#.#####");
+
+        String fff = this.getName() +" is positioned at (" + df.format(getX()) + "," + df.format(getY()) + "," + df.format(getZ()) +")";
         return fff;
         }
         return "e";
@@ -100,7 +102,7 @@ public class CelestialObject {
 
     public int hashCode(){
         
-        int aa = getClass().hashCode();
+        int aa = this.hashCode();
 
         System.out.println(aa*2);
 
