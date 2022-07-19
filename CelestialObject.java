@@ -90,15 +90,17 @@ public class CelestialObject {
 
     public boolean equals(CelestialObject obj1){
         if(obj1 != null){
-      
+        boolean test1 = this.getName().equals(obj1.getName());
+        boolean test2 = this.getX() == obj1.getX();
+        boolean test3 = this.getY() == obj1.getY();
+        boolean test4 = this.getZ() == obj1.getZ();
 
 
-        if(this.hashCode() == obj1.hashCode()){
+        if((test1 && test2) && (test3 && test4) == true){
            
-            this.hashCode();
+          
             return true;
         }else{
-            obj1.hashCode();
             return false;
         }
     }else{
@@ -108,7 +110,7 @@ public class CelestialObject {
 
     public int hashCode(){
         
-       return(getClass().hashCode());
+       return Objects.hash(x,y,z,name);
         
     }
 
