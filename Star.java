@@ -1,4 +1,5 @@
 import java.text.DecimalFormat;
+import java.util.Objects;
 
 public class Star extends CelestialObject{
 
@@ -33,6 +34,31 @@ public class Star extends CelestialObject{
         this.magnitude = magnitude;
     }
 
+    public boolean equals(Star obj1) {
+        if (obj1 != null) {
+            boolean test1 = this.getName().equals(obj1.getName());
+            boolean test2 = this.getX() == obj1.getX();
+            boolean test3 = this.getY() == obj1.getY();
+            boolean test4 = this.getZ() == obj1.getZ();
+            boolean test5 = this.getMagnitude() == obj1.getMagnitude();
+
+
+            if (((test1 && test2) && test5) && (test3 && test4) == true) {
+
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    public int hashCode() {
+
+        return Objects.hash(x, y, z, name, magnitude);
+
+    }
 
 
 }
