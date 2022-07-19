@@ -3,7 +3,7 @@ public class CelestialObject {
     public double x;
     public double y;
     public double z;
-    public String name = "e";
+    public String name;
     public final static double KM_IN_ONE_AU = 150000000;
 
 
@@ -52,12 +52,7 @@ public class CelestialObject {
 
     public String getName(){
         
-        if(name!=null){
-        
-        return name;
-        }else{
-            return null;
-        }
+        return this.name;
         
     } 
 
