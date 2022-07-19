@@ -1,5 +1,3 @@
-import java.text.DecimalFormat;
-
 public class CelestialObject {
    
     public double x;
@@ -11,17 +9,17 @@ public class CelestialObject {
 
 
     public CelestialObject(){
-        this.x = 0.0;
-        this.y = 0.0;
-        this.z = 0.0;
-        this.name = "Soleil";
+        x = 0.0;
+        y = 0.0;
+        z = 0.0;
+        name = "Soleil";
     }
 
     public CelestialObject(String f,double v1,double v2,double v3){
-        this.x = v1;
-        this.y = v2;
-        this.z = v3;
-        this.name = f;
+        x = v1;
+        y = v2;
+        z = v3;
+        name = f;
     }
 
     public void setX(double newX){
@@ -77,9 +75,13 @@ public class CelestialObject {
 
     public String toString(){
         if(getName() != null){
-            %.5g%n
-
-        String fff = this.getName() +" is positioned at (" + df.format(getX()) + "," + df.format(getY()) + "," + df.format(getZ()) +")";
+            double scale = Math.pow(10, 3);
+                
+            int newX = Math.round(getX() * scale); 
+            int newY = Math.round(getY() * scale); 
+            int newZ = Math.round(getZ() * scale); 
+ 
+        String fff = this.getName() +" is positioned at (" +newX + "," +newY + "," + newZ +")";
         return fff;
         }
         return "e";
