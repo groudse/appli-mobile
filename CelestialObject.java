@@ -77,9 +77,9 @@ public class CelestialObject {
         if(getName() != null){
             double scale = Math.pow(10, 3);
                 
-            int newX = (int)Math.round(getX() * scale); 
-            int newY = (int)Math.round(getY() * scale); 
-            int newZ = (int)Math.round(getZ() * scale); 
+            double newX = getX();
+            double newY = getY(); 
+            double newZ = getZ() ; 
  
         String fff = this.getName() +" is positioned at (" +newX + "," +newY + "," + newZ +")";
         return fff;
