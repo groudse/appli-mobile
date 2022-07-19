@@ -43,7 +43,7 @@ public class Star extends CelestialObject{
             boolean test5 = this.getMagnitude() == obj1.getMagnitude();
 
 
-            if ((((test1 && test2) && test5) && (test3 && test4)) == true) {
+            if (test1 && test2 && test5 &&  test3 && test4 == true) {
 
                 return true;
             } else {
