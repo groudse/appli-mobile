@@ -79,9 +79,7 @@ public class CelestialObject {
         if(getName() != null){
             DecimalFormat df = new DecimalFormat("###.###");
                 
-            double newX = df.format(getX());
-            double newY = df.format(getY()); 
-            double newZ = df.format(getZ()) ; 
+            
  
         String fff = this.getName() +" is positioned at (" +df.format(getX()) + "," +df.format(getY()) + "," + newZ +")";
         return fff;
