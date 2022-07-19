@@ -96,9 +96,9 @@ public class CelestialObject {
         boolean test4 = this.getZ() == obj1.getZ();
 
 
-        if((test1 && test2) && (test3 && test4) == true){
+        if(this.hashCode() == obj1.hashCode()){
            
-            hashCode();
+            
             return true;
         }else{
             return false;
@@ -110,11 +110,7 @@ public class CelestialObject {
 
     public int hashCode(){
         
-        int aa = getClass().hashCode();
-
-            
-
-        return  aa;
+       retrun(this.hashCode());
         
     }
 
