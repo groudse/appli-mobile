@@ -95,9 +95,10 @@ public class CelestialObject {
 
         if((this.hashCode() == obj1.hashCode()) && (this.getX() == obj1.getX())){
            
-            
+            this.hashCode();
             return true;
         }else{
+            obj1.hashCode();
             return false;
         }
     }else{
