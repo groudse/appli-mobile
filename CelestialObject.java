@@ -77,7 +77,7 @@ public class CelestialObject {
 
     public String toString(){
         if(getName() != null){
-        DecimalFormat df = new DecimalFormat("#.#####");
+            %.5g%n
 
         String fff = this.getName() +" is positioned at (" + df.format(getX()) + "," + df.format(getY()) + "," + df.format(getZ()) +")";
         return fff;
@@ -104,7 +104,7 @@ public class CelestialObject {
 
     public int hashCode(){
         
-        int aa = this.hashCode();
+        int aa = getClass().hashCode();
 
         System.out.println(aa*2);
 
