@@ -3,7 +3,7 @@ public class CelestialObject {
     public double x;
     public double y;
     public double z;
-    public String name;
+    public String name = "e";
     public final static double KM_IN_ONE_AU = 150000000;
 
 
