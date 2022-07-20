@@ -37,19 +37,19 @@ public class Star extends CelestialObject{
 
     public boolean equals(Star obj1) {
         if (obj1 != null) {
-            boolean test1 = this.getName().equals(obj1.getName());
-            boolean test2 = this.getX() == obj1.getX();
-            boolean test3 = this.getY() == obj1.getY();
-            boolean test4 = this.getZ() == obj1.getZ();
-            boolean test5 = this.getMagnitude() == obj1.getMagnitude();
-            
+            // boolean test1 = this.getName().equals(obj1.getName());
+            // boolean test2 = this.getX() == obj1.getX();
+            // boolean test3 = this.getY() == obj1.getY();
+            // boolean test4 = this.getZ() == obj1.getZ();
+            // boolean test5 = this.getMagnitude() == obj1.getMagnitude();
+            Star test1 = new Star(name,x,y,z,magnitude);
            // System.out.println(this== obj1);
             //System.out.println(this.getName());
             
             
             
 
-            if (test1 && test2 && test5 &&  test3 && test4 == true) {
+            if (test1.equals(obj1)) {
                 System.out.println(obj1 instanceof Star && ((Star)obj1).getX() == this.getX());
                 return true;
             } else {
