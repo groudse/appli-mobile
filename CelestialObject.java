@@ -87,7 +87,7 @@ public class CelestialObject {
         return "e";
     }
 
-    @Override
+    
     public boolean equals(Object o) {
         if (this == o) {
             return true;
