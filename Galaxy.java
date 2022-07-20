@@ -31,16 +31,16 @@ public class Galaxy {
        
             if(celestialObjects.get(i) instanceof Planet){
 
-                totalPlanet += celestialObjects.get(i).mass;
+                totalPlanet += celestialObjects.get(i).getMass();
 
 
 
             }else if(celestialObjects.get(i) instanceof Star){
-                totalStar += celestialObjects.get(i).mass;
+                totalStar += celestialObjects.get(i).getMass();
 
 
             }else{
-                totalOther += celestialObjects.get(i).mass;
+                totalOther += celestialObjects.get(i).getMass();
 
 
             }
