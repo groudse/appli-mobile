@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Star extends CelestialObject{
 
-    public double magnitude;
+    private double magnitude;
 
 
     public Star(){
@@ -43,9 +43,9 @@ public class Star extends CelestialObject{
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Star that = (Star) o;
+        CelestialObject that = (CelestialObject) o;
         return  Double.compare(that.x, x) == 0 && Double.compare(that.y, y) == 0
-                && Double.compare(that.z, z) == 0 && name.equals(that.name) && Double.compare(that.magnitude, magnitude) == 0 ;
+                && Double.compare(that.z, z) == 0 && name.equals(that.name) && Double.compare(this.magnitude, magnitude) == 0 ;
     }
 
     public int hashCode() {
