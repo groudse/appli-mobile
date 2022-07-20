@@ -31,7 +31,7 @@ public class Galaxy {
        
             if(celestialObjects.get(i) instanceof Planet){
 
-                totalPlanet += celestialObjects.get(i).getMass();
+                totalPlanet += celestialObjects.get(i).getMass() ;
 
 
 
