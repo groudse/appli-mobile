@@ -41,10 +41,10 @@ public class Star extends CelestialObject{
             boolean test3 = this.getY() == obj1.getY();
             boolean test4 = this.getZ() == obj1.getZ();
             boolean test5 = this.getMagnitude() == obj1.getMagnitude();
-            boolean test6 = this.equals(obj1);
+            
             
 
-            if (test1 && test2 && test5 &&  test3 && test4 && test6 == true) {
+            if (test1 && test2 && test5 &&  test3 && test4  == true) {
 
                 return true;
             } else {
