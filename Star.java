@@ -52,6 +52,7 @@ public class Star extends CelestialObject{
 
             if ((test1 && test2 && test5 &&  test3 && test4 == true) && counter == 0) {
                 counter++;
+                System.out.println(this== obj1);
                 return true;
             } else {
                 
