@@ -26,8 +26,8 @@ public class Character {
         return name;
     }
 
-    public void takeDamage(int dmg ){
-        if(currentHealth>0){
+    public void takeDamage(int dmg){
+        if(currentHealth-dmg > 0){
         currentHealth -= dmg;
         }
     }
