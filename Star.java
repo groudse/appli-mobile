@@ -1,5 +1,5 @@
 import java.text.DecimalFormat;
-import java.time.chrono.ThaiBuddhistChronology;
+
 import java.util.Objects;
 
 public class Star extends CelestialObject{
@@ -34,6 +34,7 @@ public class Star extends CelestialObject{
     public void setMagnitude(double magnitude){
         this.magnitude = magnitude;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -44,7 +45,7 @@ public class Star extends CelestialObject{
         }
         Star that = (Star) o;
         return Double.compare(that.x, x) == 0 && Double.compare(that.y, y) == 0
-                && Double.compare(that.z, z) == 0 && name.equals(that.name)&& Double.compare(that.magnitude, magnitude) == 0;
+                && Double.compare(that.z, z) == 0 && name.equals(that.name) && Double.compare(that.magnitude, magnitude) == 1;
     }
 
     public int hashCode() {
