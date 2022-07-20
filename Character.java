@@ -27,15 +27,12 @@ public class Character {
     }
 
     public void takeDamage(int dmg ){
-        dmg = ((dmg > 0) ? dmg : 9);
         if(this.currentHealth>0){
         this.currentHealth -= dmg;
         }
     }
 
     public void attack(Character badGuy){
-        
-
         badGuy.takeDamage(9);
     }
 
