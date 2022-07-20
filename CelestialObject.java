@@ -87,22 +87,17 @@ public class CelestialObject {
         return "e";
     }
 
-    public boolean equals(CelestialObject obj1) {
-        if (obj1 != null) {
-            boolean test1 = this.getName().equals(obj1.getName());
-            boolean test2 = this.getX() == obj1.getX();
-            boolean test3 = this.getY() == obj1.getY();
-            boolean test4 = this.getZ() == obj1.getZ();
-
-            if ((test1 && test2) && (test3 && test4) == true) {
-
-                return true;
-            } else {
-                return false;
-            }
-        } else {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
+        Star that = (Star) o;
+        return Double.compare(that.x, x) == 0 && Double.compare(that.y, y) == 0
+                && Double.compare(that.z, z) == 0 && name.equals(that.name); 
     }
 
     public int hashCode() {
