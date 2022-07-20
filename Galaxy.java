@@ -1,16 +1,18 @@
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Collections;
 
 public class Galaxy {
 
-    private List<CelestialObject> celestialObjects;
+    private List<CelestialObject> celestialObjects = new ArrayList<CelestialObject>();
 
     public Galaxy(){
-        celestialObjects = Collections.emptyList();
+        celestialObjects.clear();
     }
 
     public void addCelestialObject(CelestialObject planet) {
+        
         celestialObjects.add(planet);
 
     }
