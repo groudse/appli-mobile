@@ -50,10 +50,11 @@ public class Star extends CelestialObject{
             
             
 
-            if ((test1 && test2 && test5 &&  test3 && test4 == true) && counter == 1) {
+            if ((test1 && test2 && test5 &&  test3 && test4 == true) && counter == 0) {
+                counter++;
                 return true;
             } else {
-                counter++;
+                
                 return false;
             }
         } else {
