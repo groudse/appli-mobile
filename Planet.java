@@ -25,14 +25,13 @@ public class Planet extends CelestialObject  {
     }
 
     public String toString(){
-        // DecimalFormat df = new DecimalFormat("0.000");
+        DecimalFormat df = new DecimalFormat("0.000");
 
-        // String fff = this.name + " circles around " + centerStar.name + " at the " 
-        // +  df.format(distanceBetween(centerStar)) +" AU";
+        String fff = this.name + " circles around " + centerStar.name + " at the " 
+        +  df.format(distanceBetween(centerStar)) +" AU";
                     
-        //  return fff;
+         return fff;
 
-        return this.name+" " + this.x + " " + this.centerStar.name;
         } 
  
    
