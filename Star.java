@@ -34,31 +34,17 @@ public class Star extends CelestialObject{
     public void setMagnitude(double magnitude){
         this.magnitude = magnitude;
     }
-
-    public boolean equals(Star obj1) {
-        if (obj1 != null) {
-            boolean test1 = this.getName().equals(obj1.getName());
-            boolean test2 = this.getX() == obj1.getX();
-            boolean test3 = this.getY() == obj1.getY();
-            boolean test4 = this.getZ() == obj1.getZ();
-            boolean test5 = this.getMagnitude() == obj1.getMagnitude();
-           // System.out.println(this== obj1);
-            //System.out.println(this.getName());
-            
-            
-            
-
-            if (test1 && test2 && test5 &&  test3 && test4 == true) {
-                System.out.println(obj1 instanceof Star && ((Star)obj1).getX() == this.getX());
-                return true;
-            } else {
-                
-                return false;
-            }
-        } else {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        
+        Star that = (Star) o;
+        return Double.compare(that.x, x) == 0 && Double.compare(that.y, y) == 0
+                && Double.compare(that.z, z) == 0 && name.equals(that.name)&& Double.compare(that.magnitude, magnitude) == 0;
     }
 
     public int hashCode() {
