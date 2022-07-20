@@ -44,8 +44,8 @@ public class Star extends CelestialObject{
             return false;
         }
         Star that = (Star) o;
-        return Double.compare(that.x, x) == 0 && Double.compare(that.y, y) == 0
-                && Double.compare(that.z, z) == 0 && name.equals(that.name) && Double.compare(that.magnitude, magnitude) == 1;
+        return Double.compare(that.magnitude, magnitude) == 0 && Double.compare(that.x, x) == 0 && Double.compare(that.y, y) == 0
+                && Double.compare(that.z, z) == 0 && name.equals(that.name);
     }
 
     public int hashCode() {
