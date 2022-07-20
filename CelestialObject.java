@@ -31,7 +31,7 @@ public class CelestialObject {
         this.mass = mass;
     }
 
-    public double getMass() {
+    public int getMass() {
         return mass;
     }
 
