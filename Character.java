@@ -26,10 +26,12 @@ public class Character {
         return name;
     }
 
-    public void takeDamage(int dmg){
-        if(currentHealth-dmg > 0){
+    public void takeDamage(int dmg ){
+        if(currentHealth>0){
         currentHealth -= dmg;
-        }
+        if(currentHealth<0){
+            currentHealth = currentHealth - currentHealth;
+        }}
     }
 
     public void attack(Character badGuy){
