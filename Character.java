@@ -1,13 +1,13 @@
 public class Character {
-    private static int maxHealth; 
+    private final  int maxHealth; 
     private int currentHealth; 
-    private static String name; 
+    private final String name; 
 
 
     public Character(String name, int maxHealth){
-
-        currentHealth = maxHealth;
-
+        this.name = name;
+        this.currentHealth = maxHealth;
+        this.maxHealth = maxHealth;
     }
 
 
@@ -33,15 +33,17 @@ public class Character {
     }
 
     public void attack(Character badGuy){
-        takeDamage(9);
+        
+
+        badGuy.takeDamage(9);
     }
 
     public String toString(){
 
         String statusChara;
-
+   
         if(this.currentHealth > 0){
-            statusChara = this.getName() + " : " + (this.getCurrentHealth()/this.getMaxHealth());
+            statusChara = this.getName() + " : " + this.getCurrentHealth()+ "/" + this.getMaxHealth();
         }else{
             statusChara = this.getName() + " : KO"; 
         }
@@ -51,11 +53,3 @@ public class Character {
     }
 
 }
-
-
-/*
-
-Implement two methods :
-
-attack, with a Character parameter, that will call takeDamage of the parameter with a default value : 9. 
-*/
