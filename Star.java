@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Star extends CelestialObject{
 
-    private double magnitude;
+    public double magnitude;
 
 
     public Star(){
@@ -35,6 +35,7 @@ public class Star extends CelestialObject{
         this.magnitude = magnitude;
     }
 
+    @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
