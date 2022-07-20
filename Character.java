@@ -27,8 +27,8 @@ public class Character {
     }
 
     public void takeDamage(int dmg ){
-        if(this.currentHealth>0){
-        this.currentHealth -= dmg;
+        if(currentHealth>0){
+        currentHealth -= dmg;
         }
     }
 
@@ -41,9 +41,9 @@ public class Character {
         String statusChara;
    
         if(this.currentHealth > 0){
-            statusChara = this.getName() + " : " + this.getCurrentHealth()+ "/" + this.getMaxHealth();
+            statusChara = getName() + " : " + this.getCurrentHealth()+ "/" + getMaxHealth();
         }else{
-            statusChara = this.getName() + " : KO"; 
+            statusChara = getName() + " : KO"; 
         }
 
 
