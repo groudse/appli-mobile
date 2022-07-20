@@ -59,7 +59,7 @@ public class Planet extends CelestialObject  {
         }
         Planet that = (Planet) o;
         return  Double.compare(that.x, x) == 0 && Double.compare(that.y, y) == 0
-                && Double.compare(that.z, z) == 0 && name.equals(that.name) && getClass().equals(o) == true ;
+                && Double.compare(that.z, z) == 0 && name.equals(that.name) && this.centerStar.equals(o) ;
     }
 
     @Override
