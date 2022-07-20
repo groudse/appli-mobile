@@ -26,7 +26,8 @@ public class Character {
         return name;
     }
 
-    public void takeDamage(int dmg){
+    public void takeDamage(int dmg ){
+        dmg = ((dmg > 0) ? dmg : 9);
         if(this.currentHealth>0){
         this.currentHealth -= dmg;
         }
