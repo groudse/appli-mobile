@@ -35,7 +35,6 @@ public class Star extends CelestialObject{
         this.magnitude = magnitude;
     }
 
-    @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
@@ -44,8 +43,8 @@ public class Star extends CelestialObject{
             return false;
         }
         Star that = (Star) o;
-        return Double.compare(that.magnitude, magnitude) == 0 && Double.compare(that.x, x) == 0 && Double.compare(that.y, y) == 0
-                && Double.compare(that.z, z) == 0 && name.equals(that.name);
+        return  Double.compare(that.x, x) == 0 && Double.compare(that.y, y) == 0
+                && Double.compare(that.z, z) == 0 && name.equals(that.name) && Double.compare(that.magnitude, magnitude) == 0 ;
     }
 
     public int hashCode() {
