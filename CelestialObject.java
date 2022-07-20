@@ -8,20 +8,31 @@ public class CelestialObject {
     public double y;
     public double z;
     public String name;
+    public int mass;
     public final static double KM_IN_ONE_AU = 150000000;
 
     public CelestialObject() {
         x = 0.0;
         y = 0.0;
         z = 0.0;
+        mass = 0;
         name = "Soleil";
     }
 
-    public CelestialObject(String f, double v1, double v2, double v3) {
+    public CelestialObject(String f, double v1, double v2, double v3, int mass) {
         x = v1;
         y = v2;
         z = v3;
+        this.mass = mass;
         name = f;
+    }
+
+    public void setMass(int mass) {
+        this.mass = mass;
+    }
+
+    public double getMass() {
+        return mass;
     }
 
     public void setX(double newX) {
