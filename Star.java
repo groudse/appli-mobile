@@ -1,4 +1,5 @@
 import java.text.DecimalFormat;
+import java.time.chrono.ThaiBuddhistChronology;
 import java.util.Objects;
 
 public class Star extends CelestialObject{
@@ -41,7 +42,8 @@ public class Star extends CelestialObject{
             boolean test3 = this.getY() == obj1.getY();
             boolean test4 = this.getZ() == obj1.getZ();
             boolean test5 = this.getMagnitude() == obj1.getMagnitude();
-            boolean tt = !(this.equals(obj1));
+            
+            System.out.println(obj1 instanceof CelestialObject);
             
             
             
