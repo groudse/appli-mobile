@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Character {
-    private final  int maxHealth; 
-    private int currentHealth; 
-    private final String name; 
+    public final  int maxHealth; 
+    public int currentHealth; 
+    public final String name; 
     private static List<Character> allCharacters = new ArrayList<>();
 
 
