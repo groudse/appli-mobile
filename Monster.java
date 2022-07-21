@@ -29,7 +29,7 @@ public class Monster  extends Character{
 
 
     @Override
-    void attack(Character badGuy) {
+    public void attack(Character badGuy) {
         badGuy.takeDamage(7);
         
     }

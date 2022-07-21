@@ -84,7 +84,7 @@ public abstract class Character {
     abstract void takeDamage(int dmg );
 
 
-    abstract void attack(Character badGuy);
+    public abstract void attack(Character badGuy);
       
     
 

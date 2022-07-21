@@ -53,7 +53,7 @@ public class Templar extends Character implements Healer,Tank{
     }
 
     @Override
-    void attack(Character badGuy) {
+    public void attack(Character badGuy) {
         heal(this);
         badGuy.takeDamage(6);
         

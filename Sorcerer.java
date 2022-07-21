@@ -41,7 +41,7 @@ public class Sorcerer extends Character implements Healer {
     }
 
     @Override
-    void attack(Character badGuy) {
+    public void attack(Character badGuy) {
         heal(this);
         badGuy.takeDamage(10);
     }
