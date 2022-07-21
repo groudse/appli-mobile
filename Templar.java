@@ -1,12 +1,12 @@
 public class Templar extends Character implements Healer,Tank{
     
-    private static int healCapacity;
-    private static int shield;
+    private final int healCapacity;
+    private final int shield;
 
     public Templar(String name, int maxHealth, int healCapacity, int shield){
         super(name, maxHealth);
-        Templar.healCapacity = healCapacity;
-        Templar.shield = shield;
+        this.healCapacity = healCapacity;
+        this.shield = shield;
     }
 
     @Override
@@ -16,8 +16,8 @@ public class Templar extends Character implements Healer,Tank{
 
     @Override
     public void heal(Character perso) {
-        if(perso.getCurrentHealth() + getHealCapacity() <= perso.getMaxHealth()){
-            perso.currentHealth += getHealCapacity();
+        if(perso.getCurrentHealth() + this.getHealCapacity() <= this.getMaxHealth()){
+            perso.currentHealth += this.getHealCapacity();
             }else{
                 perso.currentHealth += (perso.getMaxHealth() - perso.getCurrentHealth());
             

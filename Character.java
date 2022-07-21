@@ -51,11 +51,11 @@ public class Character {
         }
 
         if(f1.getCurrentHealth()<0){
-            f1.currentHealth -= f1.currentHealth;
+            f1.currentHealth = 0;
             return f2;
 
         }else{
-            f2.currentHealth -= f2.currentHealth;
+            f2.currentHealth = 0;
 
             return f1;
 
@@ -70,7 +70,7 @@ public class Character {
         if(this.currentHealth >0){
         return currentHealth;
         }else{
-            this.currentHealth -= this.currentHealth;
+            currentHealth = 0;
         return currentHealth;
 
         }
@@ -82,8 +82,10 @@ public class Character {
     }
 
     public void takeDamage(int dmg ){
-        if(currentHealth>0){
         currentHealth -= dmg;
+        
+        if(currentHealth<0){
+        currentHealth = 0;
         }
     }
 
