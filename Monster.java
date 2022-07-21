@@ -30,10 +30,10 @@ public class Monster  extends Character{
 
     @Override
     public void attack(Character badGuy) {
-        if(deag == null){
+        if(this.getWeapon() == null){
         badGuy.takeDamage(7);
         }else{
-            badGuy.takeDamage(deag.getDamage());
+            badGuy.takeDamage(this.getWeapon().getDamage());
         }
     }
     
