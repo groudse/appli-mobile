@@ -67,7 +67,14 @@ public class Character {
     }
 
     public int getCurrentHealth(){
+        if(this.currentHealth >0){
         return currentHealth;
+        }else{
+            this.currentHealth -= this.currentHealth;
+        return currentHealth;
+
+
+        }
     }
 
 
