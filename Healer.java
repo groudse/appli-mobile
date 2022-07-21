@@ -1,12 +1,12 @@
-public class Healer {
+public interface Healer {
     
-    public int healCapacity;
+    //public int healCapacity;
 
     public void heal(Character perso){
 
     }
 
     public int getHealCapacity(){
-        return healCapacity;
+       
     }
 }
