@@ -73,7 +73,6 @@ public class Character {
             this.currentHealth -= this.currentHealth;
         return currentHealth;
 
-
         }
     }
 
