@@ -41,6 +41,23 @@ public class Templar extends Character implements Healer,Tank{
             " shield. So bad, it could heal "+ this.getHealCapacity()+ " HP.";
         }
     }
+
+    @Override
+    void takeDamage(int dmg) {
+        currentHealth -= (dmg-getShield());
+        
+        if(currentHealth<0){
+         currentHealth = 0;
+        }
+        
+    }
+
+    @Override
+    void attack(Character badGuy) {
+        heal(this);
+        badGuy.takeDamage(6);
+        
+    }
     
 
    

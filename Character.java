@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Character {
+public abstract class Character {
     private final  int maxHealth; 
     protected int currentHealth; 
     private final String name; 
@@ -81,17 +81,12 @@ public class Character {
         return name;
     }
 
-    public void takeDamage(int dmg ){
-        currentHealth -= dmg;
-        
-        if(currentHealth<0){
-        currentHealth = 0;
-        }
-    }
+    abstract void takeDamage(int dmg );
 
-    public void attack(Character badGuy){
-        badGuy.takeDamage(9);
-    }
+
+    abstract void attack(Character badGuy);
+      
+    
 
     public String toString(){
 
