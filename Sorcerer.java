@@ -23,10 +23,10 @@ public class Sorcerer extends Character implements Healer {
     public String toString(){
         if(this.getCurrentHealth() > 0){
         return this.getName() +" is a sorcerer with "+ this.getCurrentHealth() +
-        " HP. It can heal "+ this.getHealCapacity() +" HP. He has the weapon " + deag.toString();
+        " HP. It can heal "+ this.getHealCapacity() +" HP. He has the weapon " + this.getWeapon().toString();
         }else{
             return this.getName()+ " is a dead sorcerer. So bad, it could heal "
-            + this.getHealCapacity() + " HP. He has the weapon " + deag.toString();
+            + this.getHealCapacity() + " HP. He has the weapon " + this.getWeapon().toString();
         }
     }
 
