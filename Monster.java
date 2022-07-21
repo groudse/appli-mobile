@@ -18,7 +18,7 @@ public class Monster  extends Character{
 
 
     @Override
-    void takeDamage(int dmg) {
+    public void takeDamage(int dmg) {
         currentHealth -= Math.round(dmg*0.8);
         
         if(currentHealth<0){
