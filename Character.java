@@ -6,12 +6,14 @@ public abstract class Character {
     protected int currentHealth; 
     private final String name; 
     private static List<Character> allCharacters = new ArrayList<>();
+    public Weapon deag;
 
 
-    public Character(String name, int maxHealth){
+    public Character(String name, int maxHealth, Weapon deag){
         this.name = name;
         this.currentHealth = maxHealth;
         this.maxHealth = maxHealth;
+        this.deag = deag;
         allCharacters.add(this);
     }
 

@@ -1,8 +1,8 @@
 import java.lang.Math;
 public class Monster  extends Character{
 
-    public Monster(String name, int maxHealth) {
-        super(name, maxHealth);
+    public Monster(String name, int maxHealth,Weapon deag) {
+        super(name, maxHealth,deag);
         
     }
 
@@ -10,9 +10,9 @@ public class Monster  extends Character{
     @Override
     public String toString(){
         if(this.getCurrentHealth()>0){
-            return this.getName() + " is a monster with " + this.getCurrentHealth() + " HP";
+            return this.getName() + " is a monster with " + this.getCurrentHealth() + " HP. He has the weapon " + deag.toString();
         }else{
-            return this.getName() + " is a monster and is dead";
+            return this.getName() + " is a monster and is dead. He has the weapon " + deag.toString();
         }
     }
 
@@ -30,8 +30,11 @@ public class Monster  extends Character{
 
     @Override
     public void attack(Character badGuy) {
+        if(deag == null){
         badGuy.takeDamage(7);
-        
+        }else{
+            badGuy.takeDamage(deag.getDamage());
+        }
     }
     
 }

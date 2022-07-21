@@ -3,8 +3,8 @@ public class Templar extends Character implements Healer,Tank{
     private final int healCapacity;
     private final int shield;
 
-    public Templar(String name, int maxHealth, int healCapacity, int shield){
-        super(name, maxHealth);
+    public Templar(String name, int maxHealth, int healCapacity, int shield, Weapon deag){
+        super(name, maxHealth, deag);
         this.healCapacity = healCapacity;
         this.shield = shield;
     }
@@ -35,10 +35,10 @@ public class Templar extends Character implements Healer,Tank{
         if(this.getCurrentHealth() > 0){
         return  this.getName() + " is a strong Templar with "+this.getCurrentHealth()
                 + " HP. It can heal "+this.getHealCapacity() +" HP and has a shield of "+
-                this.getShield()+".";
+                this.getShield()+". He has the weapon " + deag.toString();
         }else{
             return this.getName() + " has been beaten, even with its " + this.getShield()+ 
-            " shield. So bad, it could heal "+ this.getHealCapacity()+ " HP.";
+            " shield. So bad, it could heal "+ this.getHealCapacity()+ " HP. He has the weapon " + deag.toString();
         }
     }
 
@@ -55,7 +55,11 @@ public class Templar extends Character implements Healer,Tank{
     @Override
     public void attack(Character badGuy) {
         heal(this);
-        badGuy.takeDamage(6);
+        if(deag == null){
+            badGuy.takeDamage(6);
+            }else{
+                badGuy.takeDamage(deag.getDamage());
+            }
         
     }
     
