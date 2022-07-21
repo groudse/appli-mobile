@@ -51,9 +51,12 @@ public class Character {
         }
 
         if(f1.getCurrentHealth()<0){
+            f1.currentHealth -= f1.currentHealth;
             return f2;
 
         }else{
+            f2.currentHealth -= f2.currentHealth;
+
             return f1;
 
         }
