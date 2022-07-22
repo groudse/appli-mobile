@@ -18,13 +18,13 @@ public class Monster  extends Character{
 
 
     @Override
-    public void takeDamage(int dmg) {
+    public void takeDamage(int dmg) throws DeadCharacterException{
 
-
+        if(currentHealth>0){
             currentHealth -= Math.round(dmg*0.8);
-
-        if(currentHealth<0){
-         currentHealth = 0;
+        }else{
+            currentHealth = 0;
+            throw new DeadCharacterException(this);
         }
         
     }
