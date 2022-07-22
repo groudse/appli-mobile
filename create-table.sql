@@ -5,4 +5,4 @@ CREATE TABLE students
 	LastName VARCHAR(80) NOT NULL,
 	Birthday DATE NOT NULL,
 	City VARCHAR(50) NOT NULL
-)
+);
