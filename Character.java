@@ -41,6 +41,8 @@ public abstract class Character {
     }
 
     public static Character fight(Character f1,Character f2) throws DeadCharacterException{
+        try{
+            if(f1.currentHealth>0 && f2.currentHealth>0){
         int i = 1;
         while(f1.getCurrentHealth() > 0 && f2.getCurrentHealth() > 0){
             if(i%2==0){
@@ -61,6 +63,8 @@ public abstract class Character {
 
             return f1;
 
+        }}catch(DeadCharacterException e){
+            System.out.println(e.getMessage());
         }
     }
 
