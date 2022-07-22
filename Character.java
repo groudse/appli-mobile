@@ -40,7 +40,7 @@ public abstract class Character {
     }
     }
 
-    public static Character fight(Character f1,Character f2) throws DeadCharacterException{
+    public static Character fight(Character f1,Character f2) {
         
         try{
             if(f1.currentHealth>0 & f2.currentHealth>0){
