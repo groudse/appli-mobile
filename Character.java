@@ -65,8 +65,9 @@ public abstract class Character {
 
         }
     }}catch(DeadCharacterException e){
-        System.out.println(e.getMessage());
+        System.err.println(e.getMessage());
     }
+        return f2;
 }
 
     public int getMaxHealth(){
