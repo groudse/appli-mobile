@@ -58,7 +58,7 @@ public abstract class Character {
         
     }
 }catch(DeadCharacterException e){
-        System.err.println(e.getMessage());
+       // System.err.println(e.getMessage());
     }
     if(f1.getCurrentHealth()<0){
         f1.currentHealth = 0;
