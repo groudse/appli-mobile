@@ -32,14 +32,14 @@ public class Monster  extends Character{
 
     @Override
     public void attack(Character badGuy) throws DeadCharacterException{
-       if(badGuy.currentHealth>0){
+       if(currentHealth>0){
         if(this.getWeapon() == null){
         badGuy.takeDamage(7);
         }else{
             badGuy.takeDamage(this.getWeapon().getDamage());
         }
     }else{
-        throw new DeadCharacterException(badGuy);
+        throw new DeadCharacterException(this);
     }
     }
     
