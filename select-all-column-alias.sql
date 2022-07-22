@@ -1,1 +1,1 @@
-SELECT EmployeeId AS Identifiant,LastName AS Nom,FirstName AS Prenom FROM employees;
+ALIAS = SELECT EmployeeId AS Identifiant,LastName AS Nom,FirstName AS Prenom FROM employees;
