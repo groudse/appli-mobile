@@ -63,10 +63,11 @@ public abstract class Character {
 
             return f1;
 
-        }}catch(DeadCharacterException e){
-            System.out.println(e.getMessage());
         }
+    }}catch(DeadCharacterException e){
+        System.out.println(e.getMessage());
     }
+}
 
     public int getMaxHealth(){
         return maxHealth;
