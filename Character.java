@@ -40,7 +40,7 @@ public abstract class Character {
     }
     }
 
-    public static Character fight(Character f1,Character f2){
+    public static Character fight(Character f1,Character f2) throws DeadCharacterException{
         int i = 1;
         while(f1.getCurrentHealth() > 0 && f2.getCurrentHealth() > 0){
             if(i%2==0){
@@ -87,10 +87,10 @@ public abstract class Character {
         return name;
     }
 
-    public abstract void takeDamage(int dmg );
+    public abstract void takeDamage(int dmg ) throws DeadCharacterException;
 
 
-    public abstract void attack(Character badGuy);
+    public abstract void attack(Character badGuy) throws DeadCharacterException;
       
     
 

@@ -10,13 +10,20 @@ public class Sorcerer extends Character implements Healer {
         return healCapacity;
     }
 
-    public void heal(Character help){
-        if(help.getCurrentHealth() + getHealCapacity() <= help.getMaxHealth()){
+    public void heal(Character help) throws DeadCharacterException{
+        
+            if(currentHealth>0){
+            if(help.getCurrentHealth() + getHealCapacity() <= help.getMaxHealth()){
         help.currentHealth += getHealCapacity();
         }else{
         help.currentHealth += (help.getMaxHealth() - help.getCurrentHealth());
         
         }
+    }else{
+        throw new DeadCharacterException(this);
+    }
+       
+        
     }
 
     @Override
@@ -31,24 +38,33 @@ public class Sorcerer extends Character implements Healer {
     }
 
     @Override
-    public void takeDamage(int dmg) {
-        currentHealth -= dmg;
+    public void takeDamage(int dmg) throws DeadCharacterException{
+ 
+            if(currentHealth>0){
+                currentHealth -= dmg;
+            }else{
+                throw new DeadCharacterException(this);
+            }
         
-        if(currentHealth<0){
-         currentHealth = 0;
-        }
         
     }
 
     @Override
-    public void attack(Character badGuy) {
-        heal(this);
-        if(this.getWeapon() == null){
+    public void attack(Character badGuy) throws DeadCharacterException{
+        
+            if(currentHealth>0){
+            heal(this);
+            if(this.getWeapon() == null){
             badGuy.takeDamage(10);
             }else{
                 badGuy.takeDamage(this.getWeapon().getDamage());
-            }
+            }}else{
+                throw new DeadCharacterException(this);
+            }       
+     
+        
     }
 }
+
 
    
