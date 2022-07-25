@@ -1,1 +1,1 @@
-SELECT  COUNT(*) FROM customers WHERE  Company IS NOT NULL ;
+SELECT  COUNT(*) AS NbCompanies FROM customers WHERE  Company IS NOT NULL ;
