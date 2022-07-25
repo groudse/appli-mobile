@@ -1,1 +1,1 @@
-SELECT Round(SUM(Total),2) AS AllInvoicesTotalPrice FROM invoices WHERE CustomerId='40';
+SELECT SUM(Total) AS AllInvoicesTotalPrice FROM invoices WHERE CustomerId='40';
