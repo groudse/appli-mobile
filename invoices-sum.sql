@@ -1,0 +1,1 @@
+SELECT Round(SUM(Total),2) FROM invoices WHERE CustomerId='40';
