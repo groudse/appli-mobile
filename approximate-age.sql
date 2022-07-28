@@ -1,2 +1,2 @@
-SELECT FirstName,LastName, round((julianday(HireDate)-julianday(BirthDate))/360) AS ApproximateAge FROM employees
-order by ApproximateAge ASC
+SELECT FirstName,LastName, strftime('%Y',HireDate)-strftime('%Y',BirthDate) AS ApproximateAge
+FROM employees order by ApproximateAge ASC
