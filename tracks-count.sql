@@ -1,0 +1,1 @@
+SELECT genres.Name, count(t.GenreId) AS NumberOfTracks FROM genres INNER JOIN tracks t on genres.GenreId = t.GenreId GROUP BY genres.Name;
