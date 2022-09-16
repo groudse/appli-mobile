@@ -4,5 +4,5 @@ SELECT FirstName,LastName,Country,
         WHEN Country IN ('United Kingdom','Sweden','Spain','Poland','Netherlands','Italy','Ireland','Hungary','Finland','Portugal','Denmark','Belgium','Austria' ,'Norway','France','Germany','Norway','Czech Republic')  THEN  'Europe'
         WHEN Country IN ('India') THEN 'Asia'
         WHEN Country IN ('Australia') THEN 'Oceania'
-    END as continent
+    END as Continent
 FROM customers;
