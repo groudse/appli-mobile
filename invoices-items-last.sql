@@ -1,1 +1,1 @@
-SELECT Name FROM tracks  where TrackId =
+SELECT Name FROM tracks  
