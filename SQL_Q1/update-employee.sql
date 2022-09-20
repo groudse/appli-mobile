@@ -1,0 +1,1 @@
+UPDATE employees SET Title='IT Manager', ReportsTo=(SELECT EmployeeId FROM employees WHERE LastName='Adams' AND FirstName='Andrew') WHERE EmployeeId=7;

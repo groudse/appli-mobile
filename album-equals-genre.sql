@@ -1,0 +1,1 @@
+select Title from albums where title in (select name from genres)

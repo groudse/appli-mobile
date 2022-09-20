@@ -1,0 +1,3 @@
+javac *.java -d build   
+java -cp build ExerciseRunner
+cd C:\Users\vocsp\OneDrive\Documents\piscine_ynov
