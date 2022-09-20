@@ -1,1 +1,1 @@
-delete from tracks where AlbumId = (select AlbumId from albums where Title='FaceLift')
+delete from tracks where AlbumId = (select AlbumId from albums where Title='Facelift')
