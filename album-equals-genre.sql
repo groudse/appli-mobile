@@ -1,1 +1,1 @@
-select Title from albums where title in (select name from genres)
+select Title,AlbumId,ArtistId from albums where title in (select name from genres);
