@@ -1,10 +1,5 @@
-select  v.EmployeeId, (v.FirstName|| " " || v.LastName) as EmployeeName,
-CASE
-    WHEN v.ReportsTo is not null then (x.FirstName|| " " || x.LastName)
-    WHEN v.ReportsTo is null then 'NULL'
-end as ReportsTo
-from employees v
-left join employees x on v.ReportsTo = x.EmployeeId
+select  v.EmployeeId, (v.FirstName|| " " || v.LastName) as EmployeeName,(x.FirstName|| " " || x.LastName) as ReportsTo
 
-
+from employees v, employees x
+where v.ReportsTo = x.EmployeeId
 
